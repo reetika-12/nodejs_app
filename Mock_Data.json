@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "first_name":"Sada",
+        "last_name":"Pensick",
+        "gender":"Polygender"
+    },
+    {
+        "id":2,
+        "first_name":"Reetika",
+        "last_name":"Singh",
+        "gender":"Female"
+    }
+]

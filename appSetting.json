@@ -1,0 +1,16 @@
+{
+    "AzureAdB2C":{
+        "Instance":"https://visionettest.b2clogin.com/",
+        "Domain":"visionettest.onmicrosoft.com",
+        "ClientId":"e2029fed-852f-495b-bfd9-60af181f718b",
+        "SignUpSignInPolicyId":"B2C_1_chg_susi",
+        "SignedOutCallbackPath":"/signout/B2C_1_chg_susi"
+    },
+    "logging":{
+        "LogLevel":{
+            "Default":"Information",
+            "Microsoft.AspNetCore":"Warning"
+        }
+    },
+    "AllowedHosts":"*"
+}
