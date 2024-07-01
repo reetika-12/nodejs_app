@@ -1,36 +1,27 @@
-const express=require('express');
-const users = require("./Mock_Data.json")
-const app=express();
-const http=require("http");
-// const nodemailer=require("nodemailer");
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 8000; // Choose the port you want to run the server on
 
+// Middleware to parse JSON bodies
+app.use(bodyParser.json());
 
-const PORT=8000;
+// POST endpoint to handle user creation
+app.post('/api/create-user', (req, res) => {
+  // Extract data from the request body
+  const { email, identities, displayName, objectId, givenName, surname, jobTitle, streetAddress, city, postalCode, state, country, extension_customAttribute1, extension_customAttribute2, step, client_id, ui_locales } = req.body;
 
-///middleware -plugin
-app.use(express.urlencoded({extended:false}));
-// app.use('body-parser')
+  // Log the received data (for demonstration purposes)
+  console.log('Received request body:', req.body);
 
-// //Routes
+  // Example of handling the received data
+  // You can perform actions like saving to a database, logging, etc.
 
-app.get("/api/users",(req,res)=>{
-    return res.json(users);
-})
-app.get(`/api/users/:id`,(req,res)=>{
-    const id=Number(req.params.id);
-    const user=users.find((user)=>user.id===id);
-    return res.json(user);
-})
-app.post(`/api/users`,(req,res)=>{
-    console.log("req params",req)
-    const body = req.body;
-    console.log("body",body)
-    /// 
-    return res.json({
-       action:'ShowBlockPage',
-       userMessage: "There was a problem with your request. You are not able to sign up at this time. Please contact your system people!"
-    })
-})
+  // Respond with a success message
+  res.status(200).json({ message: 'User created successfully' });
+});
 
-app.listen(PORT,()=>console.log(`Server started at PORT:${PORT}`))
-
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
