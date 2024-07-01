@@ -22,7 +22,7 @@ app.get(`/api/users/:id`,(req,res)=>{
     return res.json(user);
 })
 app.post(`/api/users`,(req,res)=>{
-    // console.log("req params",req.params)
+    console.log("req params",req)
     const body = req.body;
     console.log("body",body)
     /// 
