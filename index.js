@@ -20,6 +20,24 @@ app.post('/api/create-user', (req, res) => {
   // Respond with a success message
   res.status(200).json({ message: 'User created successfully' });
 });
+// POST endpoint to include data for user before sending the token 
+app.post('/api/endpoint', (req, res) => {
+    // Extract data from the request body
+    const { clientId, step, ui_locales, email, identities, displayName, extension_customAttribute1, extension_customAttribute2 } = req.body;
+  
+    // Log the received data (for demonstration purposes)
+    console.log('Received request body before generating token', req.body);
+  
+    // Example of handling the received data
+    // You can perform actions like saving to a database, logging, etc.
+  
+    // Respond with a success message
+    res.status(200).json({ message: 'Received and processed the data successfully' });
+    return res.json({
+        action:'Continue',
+        userMessage: ""
+     })
+  });
 
 // Start the server
 app.listen(port, () => {
