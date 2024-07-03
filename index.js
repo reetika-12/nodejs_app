@@ -18,7 +18,7 @@ app.post('/api/create-user', (req, res) => {
   // You can perform actions like saving to a database, logging, etc.
 
   // Respond with a success message
-  res.status(200).json({ message: 'User created successfully' });
+  // res.status(200).json({ message: 'User created successfully' });
    return res.json({
        action:'ShowBlockPage',
        userMessage: "There was a problem with your request. You are not able to sign up at this time. Please contact your system Administrator!"
