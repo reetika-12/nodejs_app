@@ -21,7 +21,7 @@ app.post('/api/create-user', (req, res) => {
   // res.status(200).json({ message: 'User created successfully' });
   // surname - for chg portal
   // displayName -for the visionet
-  if(displayName=="niranjan" || displayName=="reetika")
+  if(surname=="niranjan" || surname=="reetika")
   {
     return res.json({
        action:'Continue',
