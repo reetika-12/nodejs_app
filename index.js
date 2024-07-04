@@ -19,7 +19,7 @@ app.post('/api/create-user', (req, res) => {
 
   // Respond with a success message
   // res.status(200).json({ message: 'User created successfully' });
-  if(surname=="shetty")
+  if(displayName=="shetty")
   {
     return res.json({
        action:'Continue',
