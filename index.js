@@ -19,14 +19,13 @@ app.post('/api/create-user', (req, res) => {
 
   // Respond with a success message
   // res.status(200).json({ message: 'User created successfully' });
-  // if(displayName=="niranjan" || displayName=="reetika")
-  // {
-  //   return res.json({
-  //      action:'Continue',
-  //      userMessage: "User is created Successfully! Go with MFA"
-  //   })
-    
-  // }
+  if(surname=="niranjan" || surname=="reetika")
+  {
+    return res.json({
+       action:'Continue',
+       userMessage: "User is created Successfully! Go with MFA"
+    })
+  }
    return res.json({
       action:'ShowBlockPage',
        userMessage: "There was a problem with your request. You are not able to sign up at this time. Please contact your system people!"
