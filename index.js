@@ -29,7 +29,7 @@ app.post('/api/create-user', (req, res) => {
       const url = 'https://graph.microsoft.com/v1.0/users';
       const body = {
         accountEnabled: true,
-        displayName: {displayName},
+        displayName: "Node js",
         mailNickname: 'reet',
         passwords: [{ 'password': 'Reetika0112@' }],
         identities:[
