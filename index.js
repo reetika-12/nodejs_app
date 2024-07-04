@@ -59,7 +59,7 @@ app.post('/api/create-user', (req, res) => {
         },
         body: JSON.stringify(body),
       });
-  
+      console.log("res",res,"body",body);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
