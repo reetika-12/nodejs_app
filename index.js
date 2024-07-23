@@ -23,15 +23,15 @@ app.post('/api/create-user', (req, res) => {
   // displayName -for the visionet
   // if(surname=="niranjan" || surname=="reetika")
   // {
-    return res.json({
-       action:'Continue',
-       userMessage: "User is created Successfully! Go with MFA"
-    })
+    // return res.json({
+    //    action:'Continue',
+    //    userMessage: "User is created Successfully! Go with MFA"
+    // })
   // }
-   // return res.json({
-   //    action:'ShowBlockPage',
-   //     userMessage: "There was a problem with your request. You are not able to sign up at this time. Please contact your system people!"
-   //  })
+   return res.json({
+      action:'ShowBlockPage',
+       userMessage: "There was a problem with your request. You are not able to sign up at this time. Please contact your system people!"
+    })
 });
 // POST endpoint to include data for user before sending the token 
 app.post('/api/endpoint', (req, res) => {
