@@ -28,9 +28,13 @@ app.post('/api/create-user', (req, res) => {
     //    userMessage: "User is created Successfully! Go with MFA"
     // })
   // }
-   return res.json({
-      action:'ShowBlockPage',
-      userMessage: "There was a problem with your request. You are not able to sign up at this time.There was a problem with your request.Please contact your system Administrator at 0800 198 4895"
+   // return res.json({
+   //    action:'ShowBlockPage',
+   //    userMessage: "There was a problem with your request. You are not able to sign up at this time.There was a problem with your request.Please contact your system Administrator at 0800 198 4895"
+   //  })
+      return res.json({
+       action:'Continue',
+       userMessage: "User is created Successfully! Go with MFA"
     })
 });
 // POST endpoint to include data for user before sending the token 
